@@ -1,0 +1,86 @@
+﻿@model OnlineShoppingCartMVC.Models.TblUser
+@{
+    ViewBag.Title = "Registartion";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+
+
+<center style="background-color:lightblue">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    @using (Html.BeginForm("Registration", "Home", FormMethod.Post))
+    {
+        <table style="width: 448px; height: 440px; background-color: #ffd800; font-size: large; font-weight: bold;">
+            <th colspan="2" align="center"><h1>Register Now</h1></th>
+
+
+            <tr>
+                <td align="center"> Full Name</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.name)</a>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td align="center">Username</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.userName)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Phone</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.phone)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Password</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.password)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Confirm Password</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.password)
+                </td>
+            </tr>
+
+
+            <tr>
+                <td align="center">postal Code</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.postalCode)
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" name="submit" class="btn btnOrder" />
+                </td>
+            </tr>
+        </table>
+    }
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</center>
+
